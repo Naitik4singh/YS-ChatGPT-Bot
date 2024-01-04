@@ -29,7 +29,7 @@ async def ai_answer(client, message):
                     max_tokens=1200,  # Increase the value of max_tokens to allow for longer responses
                     temperature=0.6
                 )
-                footer_credit = "<b><a href='https://t.me/vj_bot_disscussion'>• ʀᴇᴘᴏʀᴛ ɪꜱꜱᴜᴇ •</a>══<a href='https://t.me/kingvj01'>• ᴄᴏɴᴛᴀᴄᴛ ᴍᴀꜱᴛᴇʀ •</a></b>"
+                footer_credit = "<b><a href='https://t.me/YS_SUPPORT_CHAT'>• ʀᴇᴘᴏʀᴛ ɪꜱꜱᴜᴇ •</a>══<a href='https://t.me/YS_BOTZ_01'>• ᴄᴏɴᴛᴀᴄᴛ ᴍᴀꜱᴛᴇʀ •</a></b>"
                 ai_response = response.choices[0].message.content.strip()
                 await msg.delete()
                 await send_message_in_chunks(client, message.chat.id, f"**ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴀɴsᴡᴇʀ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ʏᴏᴜʀ ǫᴜᴇʀʏ** 👇\n\n{ai_response}\n\n{footer_credit}")
@@ -37,6 +37,6 @@ async def ai_answer(client, message):
                 
             except Exception as error:
                 print(error)
-                await message.reply_text(f"**An error occurred:**\n\n**{error}**\n\n**Forward This Message To @KingVJ01**")
+                await message.reply_text(f"**An error occurred:**\n\n**{error}**\n\n**Forward This Message To @YS_BOTZ_01**")
     else:
         return
